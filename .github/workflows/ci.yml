@@ -22,9 +22,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./dockerfile  # change if your Dockerfile has a different name or path
+          file: ./Dockerfile
           push: true
           tags: anasriad8/telco-fastapi:latest
